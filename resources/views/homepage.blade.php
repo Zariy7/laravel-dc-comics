@@ -20,7 +20,7 @@
         <div class="row">
             @foreach ($comics_db as $comic)
             <div class="col-3">
-                <a href="{{ route('comic', $comic) }}">
+                <a href="{{ route('comic', $comic->id) }}">
                     <img src="{{ $comic->thumb }}" class="img-fluid img-thumbnail">
                     <h3>
                         {{ $comic->title }}
