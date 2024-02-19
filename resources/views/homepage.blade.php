@@ -16,11 +16,20 @@
 </head>
 
 <body>
-    @php
-        foreach ($comics_db as $comic) {
-            echo $comic['title'].'<br>';
-        }
-    @endphp
+    <div class="container">
+        <div class="row">
+            @foreach ($comics_db as $comic)
+            <div class="col-3">
+                <a href="{{ route('comic', [$comic]) }}">
+                    <img src="{{ $comic->thumb }}" class="img-fluid img-thumbnail">
+                    <h3>
+                        {{ $comic->series }}
+                    </h3>
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </body>
 
 </html>
