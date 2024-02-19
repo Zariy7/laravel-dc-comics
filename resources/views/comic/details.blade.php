@@ -1,3 +1,6 @@
+@extends('homepage')
+@section('content')
 @php
-    dd($comic);    
+    dd($comic);
 @endphp
+@endsection
