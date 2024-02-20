@@ -29,6 +29,11 @@
                 </a>
             </div>
             @endforeach
+            <div class="col-12 d-flex justify-content-around">
+                <a href="{{ route('addition') }}">
+                    <button class="btn btn-success">Add Your Own!</button>
+                </a>
+            </div>
         </div>
     </div>
 </body>
