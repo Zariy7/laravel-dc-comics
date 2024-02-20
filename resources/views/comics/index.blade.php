@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container my-5 py-5 bg-white rounded">
+    <div class="container my-5 bg-white rounded">
         <div class="row">
             <h1 class="text-center pb-5 text-info">Comic Catalogue</h1>
             @foreach ($comics_db as $comic)
@@ -32,7 +32,7 @@
                 </a>
             </div>
             @endforeach
-            <div class="col-12 d-flex justify-content-around">
+            <div class="col-12 d-flex justify-content-around my-5">
                 <a href="{{ route('comics.create') }}">
                     <button class="btn btn-success">Add Your Own!</button>
                 </a>

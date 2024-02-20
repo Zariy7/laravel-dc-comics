@@ -44,6 +44,8 @@
 
                     <label for="writers" class="form-label">Writers:</label>
                     <textarea type="text" name="writers" id="writers" class="form-control" cols="10" rows="10"></textarea>
+
+                    <input type="submit" class="btn btn-success" value="Submit!">
                 </form>
             </div>
         </div>
