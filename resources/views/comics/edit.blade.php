@@ -16,9 +16,12 @@
 </head>
 
 <body>
-    <h1 class="text-center">
-        <a href="{{route('comics.index')}}">Go To Comics.</a>
-    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-white">
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

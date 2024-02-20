@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-white">
-                <form action="{{ route('store') }}" method="POST">
+                <form action="{{ route('comics.store') }}" method="POST">
                 @csrf
                     <label for="image_link" class="form-label">Image Link:</label>
                     <input type="text" name="image_link" id="image_link" class="form-control">
