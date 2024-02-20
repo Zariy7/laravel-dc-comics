@@ -16,15 +16,16 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container my-5 py-5 bg-white rounded">
         <div class="row">
+            <h1 class="text-center pb-5 text-info">Comic Catalogue</h1>
             @foreach ($comics_db as $comic)
             <div class="col-3">
                 <a href="{{ route('comic', $comic->id) }}">
-                    <img src="{{ $comic->thumb }}" class="img-fluid img-thumbnail">
-                    <h3>
+                    <img src="{{ $comic->thumb }}" class="comic-thumbnail">
+                    <h5 class="text-center">
                         {{ $comic->title }}
-                    </h3>
+                    </h5>
                 </a>
             </div>
             @endforeach

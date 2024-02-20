@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(30, 30, 102);
+}
+
+.comic-thumbnail{
+    height: 8rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.comic-detailed-image{
+    height: 25rem;
+}
