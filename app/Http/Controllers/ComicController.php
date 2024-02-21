@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 
 class ComicController extends Controller
 {
@@ -35,13 +37,13 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
         $data = $request->all();
 
         $newComic = new Comic();
-
-        $newComic->title=$data['title'];
+        
+/*      $newComic->title=$data['title'];
         $newComic->description=$data['description'];
         $newComic->thumb=$data['thumb'];
         $newComic->price=$data['price'];
@@ -49,7 +51,9 @@ class ComicController extends Controller
         $newComic->sale_date=$data['sale_date'];
         $newComic->type=$data['type'];
         $newComic->artists=$data['artists'];
-        $newComic->writers=$data['writers'];
+        $newComic->writers=$data['writers']; 
+*/
+        $newComic->fill($data);
 
         $newComic->save();
 
@@ -87,7 +91,7 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
         $data = $request->all();
 

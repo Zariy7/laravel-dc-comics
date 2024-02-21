@@ -68,7 +68,7 @@
                 <button class="btn btn-primary">Edit</button>
             </a>
 
-            <form action="{{ route('comics.destroy', $comic->id)}}" method="POST">
+            <form action="{{ route('comics.destroy', $comic->id)}}" method="POST" onsubmit="return confirm('Do you want to remove this comic from the catalogue?')">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger" type="submit">Delete</button>
