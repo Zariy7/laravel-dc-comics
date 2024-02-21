@@ -21,8 +21,8 @@
             <div class="col-12 text-white">
                 <form action="{{ route('comics.store') }}" method="POST">
                 @csrf
-                    <label for="image_link" class="form-label">Image Link:</label>
-                    <input type="text" name="image_link" id="image_link" class="form-control">
+                    <label for="thumb" class="form-label">Image Link:</label>
+                    <input type="text" name="thumb" id="thumb" class="form-control">
                     
                     <label for="title" class="form-label">Title:</label>
                     <input type="text" name="title" id="title" class="form-control">
@@ -38,6 +38,9 @@
 
                     <label for="sale_date" class="form-label">Sale Date:</label>
                     <input type="text" name="sale_date" id="sale_date" class="form-control">
+
+                    <label for="type" class="form-label">Comic Type:</label>
+                    <input type="text" name="type" id="type" class="form-control">
 
                     <label for="artists" class="form-label">Artists:</label>
                     <textarea type="text" name="artists" id="artists" class="form-control" cols="10" rows="10"></textarea>

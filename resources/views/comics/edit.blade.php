@@ -23,8 +23,8 @@
                 @csrf
                 @method('PUT')
 
-                    <label for="image_link" class="form-label">Image Link:</label>
-                    <input type="text" name="image_link" id="image_link" class="form-control" value="{{ old('thumb') ?? $comic->thumb }}">
+                    <label for="thumb" class="form-label">Image Link:</label>
+                    <input type="text" name="thumb" id="thumb" class="form-control" value="{{ old('thumb') ?? $comic->thumb }}">
                     
                     <label for="title" class="form-label">Title:</label>
                     <input type="text" name="title" id="title" class="form-control" value="{{ old('title') ?? $comic->title }}">
@@ -40,6 +40,9 @@
 
                     <label for="sale_date" class="form-label">Sale Date:</label>
                     <input type="text" name="sale_date" id="sale_date" class="form-control" value="{{ old('sale_date') ?? $comic->sale_date }}">
+
+                    <label for="type" class="form-label">Comic Type:</label>
+                    <input type="text" name="type" id="type" class="form-control" value="{{ old('type') ?? $comic->type }}">
 
                     <label for="artists" class="form-label">Artists:</label>
                     <textarea type="text" name="artists" id="artists" class="form-control" cols="10" rows="10">{{ old('artists') ?? $comic->artists }}</textarea>

@@ -27,9 +27,6 @@
                         {{ $comic->title }}
                     </h5>
                 </a>
-                <a href="{{ route('comics.edit', $comic->id) }}">
-                    <button class="btn btn-primary">Edit</button>
-                </a>
             </div>
             @endforeach
             <div class="col-12 d-flex justify-content-around my-5">

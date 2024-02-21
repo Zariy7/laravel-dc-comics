@@ -63,5 +63,16 @@
                 </div>
             </div>
         </div>
+        <div class="col-6 d-flex">
+            <a href="{{ route('comics.edit', $comic->id) }}" class="me-3">
+                <button class="btn btn-primary">Edit</button>
+            </a>
+
+            <form action="{{ route('comics.destroy', $comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+        </div>
     </div>
 </div>
